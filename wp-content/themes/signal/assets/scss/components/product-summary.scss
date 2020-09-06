@@ -1,0 +1,63 @@
+/*********************************************************
+## Product summary display
+## above touch device size only show info as an overlay on hover
+*********************************************************/
+li.product a {
+  display: block;
+  position: relative;
+
+  img {
+    transition: all 0.4s ease;
+  }
+
+  @include mq($bp-m) {
+    font-size: em(18);
+  }
+
+  @include mq($bp-xl) {
+    background-color: $primary;
+    font-size: em(24);
+    font-weight: 700;
+
+    .woocommerce-loop-product__title {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all 0.5s ease;
+      color: white;
+      padding: 1em 1.5em 0;
+    }
+
+    .price {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 75%;
+      transform: translateY(-75%);
+      opacity: 0;
+      transition: all 0.5s ease;
+      color: white;
+
+      .woocommerce-Price-amount,
+      .woocommerce-Price-currencySymbol {
+        color: white;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        opacity: 0.15;
+      }
+
+      .woocommerce-loop-product__title,
+      .price,
+      .onsale {
+        opacity: 1;
+      }
+    }
+  }
+}

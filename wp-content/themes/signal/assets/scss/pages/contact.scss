@@ -1,0 +1,22 @@
+/*********************************************************
+## WP Forms
+*********************************************************/
+// .page__entry .wpforms-container {
+//   max-width: $content-max-width;
+//   margin-left: 0;
+// }
+
+/*********************************************************
+## Gravity Forms
+*********************************************************/
+// confirmation message
+.gform_confirmation_wrapper {
+  background-color: rgb(85, 255, 176);
+  padding: 0.5em 1em;
+}
+
+// textarea
+.gform_wrapper textarea.medium,
+.gform_wrapper textarea.large {
+  max-width: 700px;
+}

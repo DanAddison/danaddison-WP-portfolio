@@ -1,0 +1,45 @@
+.breadcrumb {
+  font-size: em(16);
+  max-width: $bp-xl;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post--blog,
+.comments-area {
+  max-width: $bp-xl;
+  padding: $spacing/2;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq($bp-s) {
+    padding: $spacing;
+  }
+
+  @include mq($bp-l) {
+    padding-top: 3em;
+    padding-left: $spacing * 2;
+    padding-right: $spacing * 2;
+  }
+
+  .post__header {
+    margin-bottom: $spacing;
+  }
+
+  .post-date {
+    margin-top: 2em;
+    margin-bottom: 0.25em;
+  }
+
+  .post__title {
+    margin-top: 0.5em;
+  }
+
+  .post-author {
+    margin-top: 0.25em;
+  }
+
+  .post__entry {
+    margin-bottom: $spacing;
+  }
+}

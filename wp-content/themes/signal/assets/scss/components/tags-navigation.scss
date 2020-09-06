@@ -1,0 +1,47 @@
+.tag-archive {
+  display: none;
+
+  @include mq($bp-m) {
+    display: block;
+    position: absolute;
+    top: -5.2em;
+    left: 100%;
+    transition: left 0.3s;
+    padding: $spacing/2 $spacing;
+    border-radius: 6px 0 0 6px;
+    z-index: 10;
+    width: 300px;
+
+    .tag-archive__button {
+      position: absolute;
+      width: 38px;
+      left: -38px;
+    }
+
+    .tag-archive__content {
+      position: relative;
+      padding: 8px 0 $spacing/2;
+      // overflow-y: scroll;
+    }
+
+    .is-visible-tags & {
+      left: -261px;
+    }
+  }
+}
+
+.tag-archive__title {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-top: 0;
+}
+
+.tag-archive__list {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+
+  li {
+    margin-bottom: 0.25em;
+  }
+}

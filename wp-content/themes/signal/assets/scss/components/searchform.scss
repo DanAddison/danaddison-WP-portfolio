@@ -1,0 +1,45 @@
+.search-form {
+  margin-bottom: 0;
+
+  label {
+    position: relative;
+  }
+
+  .search-field {
+    position: absolute;
+    top: -0.5em;
+    left: 125%;
+    max-width: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s linear all;
+    // font-size: 13px;
+    margin-bottom: 0;
+    padding: 0;
+
+    &:focus {
+      max-width: 200px;
+      opacity: 1;
+      padding: 0.2em 2em 0.2em 0.5em;
+    }
+  }
+
+  .icon-search {
+    cursor: pointer;
+    margin-left: 0.25em;
+    font-size: em(20);
+  }
+
+  // .search-submit {
+  //   position: absolute;
+  //   right: 6px;
+  //   height: 2em;
+  //   margin-bottom: 0;
+  //   padding: 0;
+  //   color: $copy;
+  //   text-align: center;
+  //   font-size: em(14);
+  //   background-color: inherit;
+  //   border: none;
+  // }
+}

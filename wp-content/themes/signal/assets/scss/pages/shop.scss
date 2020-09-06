@@ -1,0 +1,123 @@
+// restrict width of catalog and single product pages
+.row--woo {
+  max-width: $shop-width;
+}
+
+// also target other woo templates which don't receive my .row-woo div from the 'before main content' hook
+.woocommerce-cart .page .row,
+.woocommerce-checkout .page .row,
+.woocommerce-account .page .row {
+  max-width: $shop-width;
+
+  .page__title {
+    max-width: none;
+  }
+}
+
+/*********************************************************
+## Responsive column overrides
+In Customizer > Product Catalog > Products per Row set this to 3
+setting this to 2 involves images too big,
+setting to 4 will need even more styling overrides 
+*********************************************************/
+
+// one column only on mobiles
+@include mq-max($bp-m) {
+  .woocommerce-page.columns-3 ul.products li.product,
+  .woocommerce-page ul.products.columns-3 li.product,
+  .woocommerce.columns-3 ul.products li.product,
+  .woocommerce ul.products.columns-3 li.product {
+    width: 100% !important;
+  }
+}
+
+// two columns only up to bp-xxl
+@include mq-max($bp-xxl) {
+  .woocommerce.columns-3 ul.products li.product,
+  .woocommerce-page.columns-3 ul.products li.product,
+  .woocommerce ul.products.columns-3 li.product,
+  .woocommerce-page ul.products.columns-3 li.product {
+    width: 48%; /* was 30.75% */
+  }
+
+  .woocommerce ul.products li.first,
+  .woocommerce-page ul.products li.first {
+    clear: none; /* was both */
+  }
+
+  .woocommerce-page.columns-3 ul.products li.product:nth-child(even),
+  .woocommerce-page ul.products.columns-3 li.product:nth-child(even),
+  .woocommerce.columns-3 ul.products li.product:nth-child(even),
+  .woocommerce ul.products.columns-3 li.product:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .woocommerce-page.columns-3 ul.products li.product:nth-child(odd),
+  .woocommerce-page ul.products.columns-3 li.product:nth-child(odd),
+  .woocommerce.columns-3 ul.products li.product:nth-child(odd),
+  .woocommerce ul.products.columns-3 li.product:nth-child(odd) {
+    margin-right: 3.8%;
+  }
+}
+
+@include mq($bp-xxl) {
+  .woocommerce.columns-3 ul.products li.product,
+  .woocommerce-page.columns-3 ul.products li.product,
+  .woocommerce ul.products.columns-3 li.product,
+  .woocommerce-page ul.products.columns-3 li.product {
+    width: 32%; /* was 30.75% */
+    margin-right: 2%;
+  }
+
+  .woocommerce.columns-3 ul.products li.product.last,
+  .woocommerce-page.columns-3 ul.products li.product.last,
+  .woocommerce ul.products.columns-3 li.product.last,
+  .woocommerce-page ul.products.columns-3 li.product.last {
+    margin-right: 0;
+  }
+}
+
+// remove bottom margin on image
+.woocommerce ul.products li.product a img {
+  margin-bottom: 0;
+}
+
+// remove 'showing all 4 results' on Woo archives
+.woocommerce-result-count {
+  display: none;
+}
+
+/*********************************************************
+## Onsale badges
+*********************************************************/
+.woocommerce ul.products li.product .onsale,
+.woocommerce span.onsale {
+  top: 0.5em;
+  right: 0.5em;
+  margin: 0;
+  background-color: $primary;
+  padding: 0;
+}
+.woocommerce span.onsale {
+  left: 0.5em;
+  right: auto;
+}
+
+/*********************************************************
+## Buttons
+*********************************************************/
+
+/*********************************************************
+## Checkout
+*********************************************************/
+.woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p {
+  margin-left: 0;
+}
+
+/*********************************************************
+## Info notification banners
+*********************************************************/
+
+/*********************************************************
+## Account
+*********************************************************/

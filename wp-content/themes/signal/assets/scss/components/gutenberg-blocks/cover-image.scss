@@ -1,0 +1,13 @@
+.block-cover-image {
+  @include image-background;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 60%;
+  margin-bottom: $spacing;
+
+  @include mq($shop-width) {
+    padding-bottom: 50%;
+  }
+}

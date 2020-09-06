@@ -1,0 +1,81 @@
+// fix entire Body when sidenav open
+.is-visible-sidenav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  &.logged-in.admin-bar {
+    top: 32px;
+
+    .sidenav {
+      top: 32px;
+    }
+  }
+}
+
+.site-header {
+  z-index: 20;
+  // fullscreen overlay when sidenav open
+  // needed to be added to header (sidenav's parent element) for z-indexing to work
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    opacity: 0;
+
+    .is-visible-sidenav & {
+      opacity: 1;
+    }
+  }
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  padding: $spacing;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  transition: 0.2s ease-out;
+
+  &.menushow {
+    margin-right: 0;
+    left: calc(100% - 300px);
+  }
+
+  @include mq($bp-xl) {
+    padding: $spacing * 2;
+    width: 380px;
+
+    &.menushow {
+      left: calc(100% - 380px);
+    }
+  }
+
+  .main-nav {
+    margin-top: $spacing;
+  }
+
+  .secondary-nav {
+    .menu--secondary {
+      margin-bottom: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+/*********************************************************
+## All component-specific, theme-related colours are declared here, 
+## apart from some base stuff in elements.scss
+## Note that colours which should not be affected by theme are still set
+## using sass variables, in their relevant component sass partials
+*********************************************************/
+
+/*********************************************************
+## Blocks
+*********************************************************/
+.block-page-heading h1 {
+  color: var(--font-color);
+}
+
+.blocks-gallery-item__caption {
+  a {
+    color: var(--bg-color);
+  }
+}
+
+/*********************************************************
+## Menus
+*********************************************************/
+.sidenav {
+  background-color: var(--sidenav-bg-color);
+}
+.menu--main a {
+  color: var(--font-color);
+}
+
+.menu--icons li a {
+  color: var(--font-color);
+}
+
+button.menu-button {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: var(--font-color);
+  }
+}
+
+/*********************************************************
+## Footer
+*********************************************************/
+.footer-widgets {
+  background-color: var(--sidenav-bg-color);
+}
+
+// social icons
+.social-icons a {
+  color: var(--primary-color);
+}
+
+// newsletter subscribe
+input#mc-embedded-subscribe.button {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+  }
+}
+
+// nebulo credit
+.logo-circle::after {
+  background: var(--bg-color);
+}
+
+/*********************************************************
+## Sticky nav
+*********************************************************/
+.sticky-nav__link {
+  border: 1px solid var(--grey-font-color);
+}
+.sticky-nav__cart--count {
+  color: var(--grey-font-color);
+}
+
+/*********************************************************
+## Blog
+*********************************************************/
+.breadcrumb {
+  color: var(--grey-font-color);
+  a {
+    color: var(--grey-font-color);
+  }
+}
+
+.post--blog {
+  background-color: var(--sidenav-bg-color);
+
+  .post-date {
+    color: var(--grey-font-color);
+    border-bottom: 1px solid var(--grey-font-color);
+  }
+
+  .post-author {
+    color: var(--grey-font-color);
+  }
+}
+
+/*********************************************************
+## Woocommerce
+*********************************************************/
+// buttons
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+  background-color: var(--action-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--action-hover);
+  }
+}
+
+// Info notification banners
+.woocommerce-info,
+.woocommerce-message,
+.woocommerce-error {
+  background-color: var(--sidenav-bg-color);
+  color: var(--font-color);
+}
+
+// onsale badges
+.woocommerce ul.products li.product .onsale,
+.woocommerce span.onsale {
+  background-color: var(--primary-color);
+}
+
+// single product title
+.product_title {
+  border-bottom: 1px solid var(--font-color);
+}
+
+// single product SKU and categories
+.product_meta span {
+  color: var(--grey-font-color);
+}
+
+// price
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+  color: var(--primary-color);
+}
+
+.single-product-specs {
+  color: var(--grey-font-color);
+}
+
+// description/review tabs
+// .woocommerce-page div.product .woocommerce-tabs {
+//   // actual tab bg colours
+//   ul.tabs li {
+//     background-color: var(--sidenav-bg-color);
+
+//     &.active {
+//       background-color: var(--active-tab-color);
+//     }
+
+//     a {
+//       color: var(--font-color);
+//     }
+//   }
+// }
+
+// Account
+.select2-results {
+  background-color: var(--sidenav-bg-color);
+}
+
+// checkout
+.woocommerce-checkout #payment {
+  background-color: var(--sidenav-bg-color);
+}

@@ -1,0 +1,39 @@
+/*********************************************************
+## custom page heading block 
+*********************************************************/
+.block-page-heading {
+  h1 {
+    margin-top: 0.75em;
+    margin-bottom: 1em;
+
+    span {
+      display: block;
+
+      &.line-1 {
+        text-transform: uppercase;
+        font-weight: 300;
+        line-height: 1.7;
+        letter-spacing: 1px;
+        font-size: 0.6em;
+
+        @include mq($bp-l) {
+          font-size: 0.5em;
+        }
+      }
+
+      &.line-2 {
+        line-height: 1.1;
+      }
+    }
+  }
+
+  .subtitle {
+    @include mq($bp-m) {
+      font-size: em(18);
+    }
+
+    @include mq($bp-xl) {
+      font-size: em(22);
+    }
+  }
+}

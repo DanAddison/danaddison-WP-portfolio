@@ -1,0 +1,119 @@
+.post-preview {
+  background-color: var(--sidenav-bg-color);
+  position: relative;
+  margin-bottom: $spacing;
+  margin-left: 1em;
+  width: 100%;
+  // border: 1px solid var(--grey-font-color);
+  // box-shadow: 2px 2px 4px 1px rgba(174, 174, 174, 0.5);
+}
+
+.post-preview__image {
+  z-index: 1;
+  max-width: 400px;
+
+  a {
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 60%;
+
+    img {
+      display: block;
+      margin-bottom: 0;
+      position: absolute;
+      top: -1em;
+      left: -1em;
+      // border: 1px solid var(--grey-font-color);
+      // box-shadow: 2px 2px 4px 1px rgba(174, 174, 174, 0.5);
+    }
+  }
+}
+
+.post-preview__content {
+  min-height: 100%;
+  width: 100%;
+  padding: 0 1.5em 1.5em;
+}
+
+.post-header {
+  .post-meta {
+    margin-bottom: 0.5em;
+    color: var(--grey-font-color);
+    font-size: em(15);
+
+    .post-date {
+      padding-right: 0.25em;
+      display: block;
+    }
+
+    .cat-links {
+      position: relative;
+
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @include mq($bp-m) {
+      .post-date {
+        display: inline-block;
+      }
+      .cat-links {
+        padding-left: 1em;
+
+        &::before {
+          content: "/";
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .post-title {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    font-size: em(32);
+    font-weight: 500;
+    a {
+      text-decoration: none;
+      color: var(--font-color);
+    }
+  }
+  .post-author {
+    color: var(--grey-font-color);
+    font-size: em(18);
+    margin-bottom: 1em;
+  }
+}
+
+.post__excerpt {
+  a {
+    color: var(--font-color);
+  }
+}
+
+// breakpoints
+@include mq(700px) {
+  .post-preview {
+    display: flex;
+  }
+
+  .post-preview__image {
+    padding-bottom: 0;
+    height: auto;
+    width: 35%;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .post-preview__content {
+    padding-top: 1.5em;
+  }
+}

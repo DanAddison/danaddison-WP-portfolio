@@ -1,0 +1,65 @@
+{
+    "key": "group_5dc00fade8f82",
+    "title": "Block: Cover Image",
+    "fields": [
+        {
+            "key": "field_5dc00fb483255",
+            "label": "Cover Image",
+            "name": "cover_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "cover_s",
+            "library": "all",
+            "min_width": 2200,
+            "min_height": 1320,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5de4e67c06d10",
+            "label": "Guidance",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "A responsive background image which crops to 1 : 0.6 aspect ratio.\r\nThis allows for serving the appropriate size for the device, so use it when you want a full-width image on the page.",
+            "new_lines": "br",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/cover-image"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1575282471
+}

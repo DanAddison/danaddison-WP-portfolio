@@ -1,0 +1,31 @@
+/*********************************************************
+## Portfolio archives:
+  archive-portfolio.php template (if in use)
+  taxonomy.php template
+*********************************************************/
+
+.taxonomy-archive__header {
+  max-width: $content-max-width;
+}
+
+.portfolio-archive__title,
+.taxonomy-archive__title {
+  margin: 0.5em 0;
+}
+
+/*********************************************************
+## Blog (default posts archive)
+*********************************************************/
+.row--blog {
+  padding-top: $spacing * 3;
+
+  @include mq($bp-l) {
+    padding-left: $spacing * 2;
+    padding-right: $spacing * 2;
+  }
+
+  @include mq($bp-xxl) {
+    padding-left: $spacing * 3;
+    padding-right: $spacing * 3;
+  }
+}

@@ -1,0 +1,19 @@
+// .page__header {
+// }
+.home .page__title {
+  text-align: center;
+}
+
+.site-main {
+  .page__title,
+  .page-title,
+  .post__title {
+    margin: 0;
+  }
+}
+
+.page__entry {
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}
